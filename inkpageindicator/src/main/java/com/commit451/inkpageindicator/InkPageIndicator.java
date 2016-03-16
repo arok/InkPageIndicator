@@ -237,7 +237,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
         setCurrentPageImmediate();
     }
 
-    private void setCurrentPageImmediate() {
+    public void setCurrentPageImmediate() {
         if (viewPager != null) {
             currentPage = viewPager.getCurrentItem();
         } else {
