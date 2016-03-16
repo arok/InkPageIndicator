@@ -316,7 +316,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (viewPager == null || pageCount == 0) return;
+        if (pageCount == 0) return;
         drawUnselected(canvas);
         drawSelected(canvas);
     }
