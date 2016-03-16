@@ -1,5 +1,18 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+    }
+}
+
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'
+
+version = "1.0.0"
+group = "me.chuvashev"
+archivesBaseName = "ink-page-indicator"
 
 android {
     compileSdkVersion 23
@@ -29,14 +42,3 @@ dependencies {
 }
 
 
-// ./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
-publish {
-    userOrg = 'commit451'
-    groupId = 'com.commit451'
-    artifactId = 'inkpageindicator'
-    version = '1.0.2'
-    description = 'InkPageIndicator from Plaid https://github.com/nickbutcher/plaid '
-    website = 'https://github.com/Commit451/InkPageIndicator'
-    issueTracker = "https://github.com/Commit451/InkPageIndicator/issues"
-    repository = "https://github.com/Commit451/InkPageIndicator.git"
-}

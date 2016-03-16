@@ -210,7 +210,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
         // nothing to do
     }
 
-    private void setPageCount(int pages) {
+    public void setPageCount(int pages) {
         pageCount = pages;
         resetState();
         requestLayout();
@@ -548,7 +548,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
         canvas.drawCircle(selectedDotX, dotCenterY, dotRadius, selectedPaint);
     }
 
-    private void setSelectedPage(int now) {
+    public void setSelectedPage(int now) {
         if (now == currentPage) return;
 
         pageChanging = true;
